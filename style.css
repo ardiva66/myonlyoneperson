@@ -1,0 +1,145 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY & BACKGROUND ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/love_background.jpg'); /* Background bunga-bunga */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== HATI BERJATUHAN (container) ===== */
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* biar tidak mengganggu klik */
+    z-index: 1;
+}
+
+/* ===== CONTAINER SURAT ===== */
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* ===== KOTAK SURAT ===== */
+.letter {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+/* ===== GAMBAR HATI DI ATAS ===== */
+.heart-img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* ===== JUDUL ===== */
+h1.greeting {
+    color: #e63946;
+    font-size: 2.3em;
+    margin-bottom: 15px;
+}
+
+/* ===== ISI SURAT ===== */
+.content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+/* ===== SLIDER GAMBAR ===== */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Animasi slider */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* ===== VIDEO ===== */
+.video-container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== PENUTUP ===== */
+.closing {
+    font-size: 1.4em;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* ===== AUDIO PLAYER ===== */
+audio {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+/* ===== RESPONSIVE UNTUK MOBILE ===== */
+@media (max-width: 600px) {
+    .letter {
+        padding: 20px;
+    }
+
+    h1.greeting {
+        font-size: 1.8em;
+    }
+
+    .content {
+        font-size: 1em;
+    }
+
+    .heart-img {
+        width: 45px;
+    }
+}
